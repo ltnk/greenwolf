@@ -1,0 +1,61 @@
+<section class="gw-homepage-container">
+  <section class="gw-homepage">
+    <div class="news-container">
+      <div class="before" (click)="goToPreviousSlide()">
+        <img src="../../assets/less-shape.png" alt="" width="30px" />
+      </div>
+      <div class="news">
+        <img
+          src="../../assets/{{ slides[slideIndex].icon }}.png"
+          alt=""
+          width="50px"
+        />
+
+        <h1>
+          TheGreenWolf
+        </h1>
+
+        <p>
+          {{ slides[slideIndex].title }}
+        </p>
+        <a href="{{ slides[slideIndex].link }}"
+          ><img
+            class="youtube"
+            src="../../assets/{{ slides[slideIndex].iconLink }}.png"
+            alt=""
+            width="50px"
+        /></a>
+      </div>
+      <div class="after" (click)="goToNextSlide()">
+        <img src="../../assets/greater-shape.png" alt="" width="30px" />
+      </div>
+    </div>
+
+    <div class="last-videos-container">
+      <h2>Les dernières vidéos</h2>
+      <div class="last-videos">
+        <div *ngFor="let video of videos" class="video-container">
+          <a href="{{ video.link }}"
+            ><img
+              src="../../assets/videos-img/{{ video.img }}.png"
+              alt=""
+              width="300px"
+          /></a>
+
+          <div class="video-desc">
+            <p>
+              <a
+                href="https://www.youtube.com/channel/UCnLJ7SZWDURUmyx6YPCLUXw"
+                >{{ video.category }}</a
+              >
+            </p>
+            <p>
+              <a href="{{ video.link }}">{{ video.title }}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-gw-footer></app-gw-footer>
+  </section>
+</section>

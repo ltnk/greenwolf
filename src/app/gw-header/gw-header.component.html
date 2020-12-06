@@ -1,0 +1,72 @@
+<div class="gw-header-container">
+  <section class="gw-header">
+    <div class="logo">
+      <div class="menu-button">
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="gwmenu"
+          aria-label="Example icon-button with a menu"
+        >
+          <i class="material-icons">
+            menu
+          </i>
+        </button>
+        <mat-menu #gwmenu="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="gwcategories">
+            Catégories
+          </button>
+          <button mat-menu-item routerLink="/ebooks">
+            E-books
+          </button>
+          <button mat-menu-item routerLink="/videos">
+            Vidéos
+          </button>
+          <!--     <button mat-menu-item routerLink="/blog">
+            Blog
+          </button> -->
+          <button mat-menu-item routerLink="/home">
+            Accueil
+          </button>
+        </mat-menu>
+
+        <mat-menu #gwcategories="matMenu">
+          <button mat-menu-item routerLink="/zero-dechet">Zéro-déchet</button>
+          <button mat-menu-item routerLink="/recettes">Recettes</button>
+          <button mat-menu-item routerLink="/essayer">"J'ai essayé"</button>
+        </mat-menu>
+      </div>
+      <div routerLink="/home">
+        <img src="../../assets/ecological.png" alt="" width="40px" />
+      </div>
+      <div routerLink="/home">
+        <h1>TheGreenWolf</h1>
+      </div>
+    </div>
+    <div class="account">
+      <!--
+      <div>
+        <img src="../../assets/account.png" alt="" width="40px" />
+      </div>
+
+            <div>
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="account"
+          aria-label="Example icon-button with a menu"
+        >
+          <i class="material-icons">
+            more_vert
+          </i>
+        </button>
+        <mat-menu #account="matMenu">
+          <button mat-menu-item>
+            m'inscrire
+          </button>
+          <button mat-menu-item>
+            me connecter
+          </button>
+        </mat-menu>
+      </div> -->
+    </div>
+  </section>
+</div>

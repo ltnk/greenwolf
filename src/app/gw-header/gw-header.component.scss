@@ -1,0 +1,91 @@
+/* Big Screen */
+@media (min-width: 801px) {
+  .gw-header-container {
+    height: 60px;
+    display: flex;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+    .gw-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .logo {
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        .menu-button {
+          display: none;
+        }
+        div {
+          h1 {
+            margin-left: 10px;
+          }
+          img {
+            margin-top: 4px;
+          }
+        }
+      }
+      .account {
+        display: flex;
+        align-items: center;
+        /*     .newsletter {
+          img {
+            margin-top: 4px;
+            margin-right: 20px;
+          }
+        } */
+        div {
+          img {
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Small screen */
+@media (max-width: 800px) {
+  .gw-header-container {
+    height: 60px;
+    display: flex;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+    .gw-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .logo {
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+
+        div {
+          h1 {
+            margin-left: 10px;
+          }
+          img {
+            margin-top: 4px;
+          }
+        }
+      }
+      .account {
+        display: flex;
+        align-items: center;
+        /*     .newsletter {
+          img {
+            margin-top: 4px;
+            margin-right: 20px;
+          }
+        } */
+        div {
+          img {
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+}

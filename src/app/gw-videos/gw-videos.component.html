@@ -1,0 +1,39 @@
+<section class="gw-homepage-container">
+  <section class="gw-homepage">
+    <div class="head">
+      <h2>Nos vidéos</h2>
+      <a href="https://www.youtube.com/channel/UCnLJ7SZWDURUmyx6YPCLUXw"
+        ><img src="../../assets/youtube-logo.png" alt="" width="70px"
+      /></a>
+
+      <p>Retrouvez-ici toutes nos vidéos !</p>
+    </div>
+
+    <div class="last-videos-container">
+      <h2>Toutes les vidéos</h2>
+      <div class="last-videos">
+        <div *ngFor="let video of videos" class="video-container">
+          <a href="{{ video.link }}"
+            ><img
+              src="../../assets/videos-img/{{ video.img }}.png"
+              alt=""
+              width="300px"
+          /></a>
+
+          <div class="video-desc">
+            <p>
+              <a
+                href="https://www.youtube.com/channel/UCnLJ7SZWDURUmyx6YPCLUXw"
+                >{{ video.category }}</a
+              >
+            </p>
+            <p>
+              <a href="{{ video.link }}">{{ video.title }}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-gw-footer></app-gw-footer>
+  </section>
+</section>

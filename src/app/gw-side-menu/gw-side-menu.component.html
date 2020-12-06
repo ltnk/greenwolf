@@ -1,0 +1,144 @@
+<section class="all-gw-homepage">
+  <div class="gw-homepage-menu">
+    <div class="onglet">
+      <button mat-button routerLink="/home" routerLinkActive="mat-accent">
+        Accueil
+      </button>
+    </div>
+    <div class="onglet onglet-categories">
+      <div>
+        <button
+          mat-button
+          routerLink="/categories"
+          routerLinkActive="mat-accent"
+        >
+          Catégories
+        </button>
+      </div>
+      <div>
+        <i
+          *ngIf="!isVisible"
+          class="material-icons"
+          (click)="toggleCategories()"
+        >
+          add_circle_outline
+        </i>
+        <i
+          *ngIf="isVisible"
+          class="material-icons"
+          (click)="toggleCategories()"
+        >
+          remove_circle_outline
+        </i>
+      </div>
+    </div>
+
+    <section *ngIf="isVisible" class="sub-categories">
+      <div>
+        <button
+          mat-button
+          routerLink="/zero-dechet"
+          routerLinkActive="mat-accent"
+        >
+          Zéro-déchet
+        </button>
+      </div>
+      <div>
+        <button mat-button routerLink="/recettes" routerLinkActive="mat-accent">
+          Recettes
+        </button>
+      </div>
+      <div>
+        <button mat-button routerLink="/essayer" routerLinkActive="mat-accent">
+          "J'ai essayé"
+        </button>
+      </div>
+
+      <!-- <div routerLink="/blog">Blog</div> -->
+    </section>
+
+    <div class="onglet onglet-categories">
+      <div>
+        <button
+          mat-button
+          routerLink="/challenges"
+          routerLinkActive="mat-accent"
+        >
+          Challenges
+        </button>
+      </div>
+      <div class="icons">
+        <i
+          *ngIf="!isChallengeVisible"
+          class="material-icons"
+          (click)="toggleChallenges()"
+        >
+          add_circle_outline
+        </i>
+        <i
+          *ngIf="isChallengeVisible"
+          class="material-icons"
+          (click)="toggleChallenges()"
+        >
+          remove_circle_outline
+        </i>
+      </div>
+    </div>
+
+    <section *ngIf="isChallengeVisible" class="sub-categories">
+      <div>
+        <button
+          mat-button
+          routerLink="/challenge-seven"
+          routerLinkActive="mat-accent"
+        >
+          Une semaine !
+        </button>
+      </div>
+      <div>
+        <button
+          mat-button
+          routerLink="/challenge-ten"
+          routerLinkActive="mat-accent"
+        >
+          Dix jours !
+        </button>
+      </div>
+      <div>
+        <button
+          mat-button
+          routerLink="/challenge-thirty"
+          routerLinkActive="mat-accent"
+        >
+          Un mois !
+        </button>
+      </div>
+    </section>
+
+    <div class="onglet">
+      <button mat-button routerLink="/ebooks" routerLinkActive="mat-accent">
+        E-books
+      </button>
+    </div>
+
+    <div class="onglet">
+      <button mat-button routerLink="/videos" routerLinkActive="mat-accent">
+        Vidéos
+      </button>
+    </div>
+
+    <div class="onglet">
+      <button mat-button routerLink="/about" routerLinkActive="mat-accent">
+        A propos
+      </button>
+    </div>
+
+    <div class="social-media">
+      <div>
+        <a href="https://www.youtube.com/channel/UCnLJ7SZWDURUmyx6YPCLUXw"
+          ><img src="../../assets/youtube-logo.png" alt="" width="40px"
+        /></a>
+      </div>
+    </div>
+  </div>
+</section>

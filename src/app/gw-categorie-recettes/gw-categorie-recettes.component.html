@@ -1,0 +1,50 @@
+<section class="ebooks-page-container">
+  <div class="ebooks-page">
+    <div class="head">
+      <h2>Les recettes</h2>
+      <a routerLink="/zero-dechet"
+        ><img src="../../assets/human.png" alt="" width="70px"
+      /></a>
+
+      <p>
+        Nous utilisons beaucoup de produits dont nous ignorons la composition
+        par habitude et par facilité. Ici, vous trouverez des recettes toutes
+        simples pour mieux consommer !
+      </p>
+    </div>
+
+    <div class="last-videos-container">
+      <h2>Les vidéos</h2>
+      <div class="last-videos">
+        <div *ngFor="let video of videos" class="video-container">
+          <a href="{{ video.link }}"
+            ><img
+              src="../../assets/videos-img/{{ video.img }}.png"
+              alt=""
+              width="300px"
+          /></a>
+
+          <div class="video-desc">
+            <p>
+              <a
+                href="https://www.youtube.com/channel/UCnLJ7SZWDURUmyx6YPCLUXw"
+                >{{ video.category }}</a
+              >
+            </p>
+            <p>
+              <a href="{{ video.link }}">{{ video.title }}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="youtube">
+      <p>La chaine Youtube</p>
+      <a href="https://www.youtube.com/channel/UCnLJ7SZWDURUmyx6YPCLUXw"
+        ><img src="../../assets/youtube-logo.png" alt="" width="60px"
+      /></a>
+    </div>
+  </div>
+  <app-gw-footer></app-gw-footer>
+</section>
